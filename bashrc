@@ -134,4 +134,5 @@ PS1="\n\$(parse_virtualenv)\$(parse_git_branch)\$(parse_git_status)\u@\h:\e[0;32
 # vim mode for bash
 set -o vi
 
+# octave
 export GNUTERM=x11
