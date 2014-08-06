@@ -136,3 +136,7 @@ set -o vi
 
 # octave
 export GNUTERM=x11
+
+# python shell startup file
+export PYTHONSTARTUP=$HOME/.pythonstartup.py
+
