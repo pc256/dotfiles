@@ -43,6 +43,8 @@ map <C-n> :NERDTreeToggle %:p:h<CR>
 map <C-g> :TagbarToggle<CR>
 
 noremap <F5> : let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
+noremap <F10> :!ctags -R --languages=Python --python-kinds=-i .<CR>
+
 highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
 noremap <Leader>wn :match ExtraWhitespace /^\s* \s*\<Bar>\s\+$/<CR>
 noremap <Leader>wf :match<CR>
