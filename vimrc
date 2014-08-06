@@ -42,6 +42,11 @@ cnoreabbrev bb buffers
 map <C-n> :NERDTreeToggle %:p:h<CR>
 map <C-g> :TagbarToggle<CR>
 
+noremap <F5> : let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
+highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
+noremap <Leader>wn :match ExtraWhitespace /^\s* \s*\<Bar>\s\+$/<CR>
+noremap <Leader>wf :match<CR>
+
 nmap <silent> <c-k> :wincmd k<CR>
 nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
