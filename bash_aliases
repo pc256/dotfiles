@@ -1,5 +1,6 @@
 # git aliases
-alias gitlg='git log'
+alias gitco='git checkout'
+alias gitlg='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
 alias gitst='git status'
 alias gitx='/Applications/GitX.app/Contents/MacOS/GitX . &'
 
