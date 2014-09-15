@@ -1,2 +1,6 @@
 Dotfiles
 ========
+
+- On clean install vim will require vundle to be installed...
+$ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+$ vim +PluginInstall +qall
