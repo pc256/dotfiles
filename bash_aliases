@@ -3,6 +3,7 @@ alias find='gfind'
 alias grep='ggrep --exclude-dir=".git"'
 
 # git aliases
+alias gitbr='git branch'
 alias gitco='git checkout'
 alias gitlg='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
 alias gpull='git pull'
