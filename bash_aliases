@@ -11,3 +11,5 @@ alias gpush='git push'
 alias gitst='git status'
 alias gitx='/Applications/GitX.app/Contents/MacOS/GitX . &'
 
+# apps
+alias vlc='open ~/Applications/VLC.app'
