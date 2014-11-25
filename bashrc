@@ -139,10 +139,16 @@ export GNUTERM=x11
 
 # python shell startup file
 export PYTHONSTARTUP=$HOME/.pythonstartup.py
-
+export HOMEBREW_GITHUB_API_TOKEN=0b74e041ad27fb724bbee1999ae0463b542aa41d
 export JAVA_HOME=`/usr/libexec/java_home`
+
 # docker
 if [ -f ~/.docker_env ]; then
     . ~/.docker_env
+fi
+
+# maven
+if [ -f ~/.maven_opts ]; then
+    . ~/.maven_opts
 fi
 
