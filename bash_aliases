@@ -1,6 +1,7 @@
 # gnu tools
 alias find='gfind'
 alias grep='ggrep --exclude-dir=".git"'
+alias sed='gsed'
 
 # git aliases
 alias gitbr='git branch'
