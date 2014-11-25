@@ -1,0 +1,5 @@
+if [ `boot2docker status` == 'running' ]; then
+    export DOCKER_HOST=`boot2docker socket 2>/dev/null`
+    export DOCKER_CERT_PATH=/Users/pete/.docker/boot2docker-vm
+    export DOCKER_TLS_VERIFY=1
+fi

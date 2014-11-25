@@ -11,8 +11,5 @@ alias gpush='git push'
 alias gitst='git status'
 alias gitx='/Applications/GitX.app/Contents/MacOS/GitX . &'
 
-# docker / boot2docker
-alias dockerhost='export DOCKER_HOST=`boot2docker socket 2>/dev/null`'
-
 # apps
 alias vlc='open ~/Applications/VLC.app'

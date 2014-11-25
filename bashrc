@@ -141,3 +141,8 @@ export GNUTERM=x11
 export PYTHONSTARTUP=$HOME/.pythonstartup.py
 
 export JAVA_HOME=`/usr/libexec/java_home`
+# docker
+if [ -f ~/.docker_env ]; then
+    . ~/.docker_env
+fi
+
