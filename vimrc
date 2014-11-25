@@ -26,13 +26,13 @@ set number
 set ruler
 set noswapfile
 set nobackup
-set autoindent
-set expandtab
 set backspace=indent,eol,start
 set mouse=a
 set laststatus=2
+set expandtab
 set tabstop=4
 set sw=4
+set autoindent
 set clipboard=unnamed
 syntax on
 
