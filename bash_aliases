@@ -13,3 +13,6 @@ alias gitx='/Applications/GitX.app/Contents/MacOS/GitX . &'
 
 # apps
 alias vlc='open ~/Applications/VLC.app'
+
+# useful
+alias randpw='openssl rand -base64'
