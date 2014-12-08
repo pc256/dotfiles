@@ -108,9 +108,6 @@ fi
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
-if [ -f ~/.git_aliases ]; then
-    . ~/.git_aliases
-fi
 
 # virtualenvwrapper
 export WORKON_HOME=$HOME/development/.virtualenvs
