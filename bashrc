@@ -110,7 +110,7 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 # virtualenvwrapper
-export WORKON_HOME=$HOME/development/.virtualenvs
+export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 
 export VIRTUAL_ENV_DISABLE_PROMPT=1
