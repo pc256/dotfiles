@@ -1,26 +1,19 @@
 set nocompatible              " be iMproved, required
+
 filetype off                  " required
-set clipboard+=unnamed
-syntax on
 
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" let Vundle manage Vundle, required
+set rtp+=~/.vim/bundle/Vundle.vim " set the runtime path to include Vundle
+call vundle#begin() " let Vundle manage plungs
 Plugin 'gmarik/Vundle.vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
-Plugin 'Lokaltog/vim-powerline'
+Plugin 'bling/vim-airline'
+Plugin 'jmcantrell/vim-virtualenv'
 Plugin 'ervandew/supertab'
 Plugin 'majutsushi/tagbar'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-filetype plugin on
+Plugin 'Valloric/YouCompleteMe'
+call vundle#end() " end vundle
 
 set number
 set ruler
@@ -28,13 +21,17 @@ set noswapfile
 set nobackup
 set backspace=indent,eol,start
 set mouse=a
-set laststatus=2
 set expandtab
 set tabstop=4
 set sw=4
 set autoindent
-set clipboard=unnamed
+set clipboard+=unnamed
+set laststatus=2
+
+filetype plugin on
+filetype plugin indent on
 syntax on
+
 
 cnoreabbrev B b
 cnoreabbrev bb buffers
@@ -55,4 +52,14 @@ nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+autocmd FileType java set tags=~/development/.javatags
+autocmd FileType python set tags=~/development/.pythontags
+
+function! AirlineInit()
+let g:airline_section_b = airline#section#create('%{virtualenv#statusline()}')
+let g:airline#extensions#virtualenv#enabled = 1
+endfunction
+
+autocmd VimEnter * call AirlineInit()
 
