@@ -143,6 +143,7 @@ export GNUTERM=x11
 export PYTHONSTARTUP=$HOME/.pythonstartup.py
 export HOMEBREW_GITHUB_API_TOKEN=0b74e041ad27fb724bbee1999ae0463b542aa41d
 export JAVA_HOME=`/usr/libexec/java_home`
+export QRIOUSLY_HOME=$HOME/development/qriously
 
 # docker
 if [ -f ~/.docker_env ]; then
@@ -153,4 +154,3 @@ fi
 if [ -f ~/.maven_opts ]; then
     . ~/.maven_opts
 fi
-
