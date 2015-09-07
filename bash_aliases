@@ -8,6 +8,7 @@ alias vlc='open ~/Applications/VLC.app'
 
 # useful
 alias randpw='openssl rand -base64'
+alias j7='export JAVA_HOME=`/usr/libexec/java_home -v '1.7*'`'
 alias j8='export JAVA_HOME=`/usr/libexec/java_home -v '1.8*'`'
 
 # git aliases
