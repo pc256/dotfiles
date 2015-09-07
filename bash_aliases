@@ -11,6 +11,11 @@ alias randpw='openssl rand -base64'
 alias j7='export JAVA_HOME=`/usr/libexec/java_home -v '1.7*'`'
 alias j8='export JAVA_HOME=`/usr/libexec/java_home -v '1.8*'`'
 
+# qriously
+if [ -f ~/.qriously_aliases ]; then
+    . ~/.qriously_aliases
+fi
+
 # git aliases
 if [ -f ~/.git_aliases ]; then
     . ~/.git_aliases

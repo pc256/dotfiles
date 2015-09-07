@@ -1,0 +1,3 @@
+alias ssh_knime='ssh -p 9122 -L 5900:localhost:5900 root@datascience.qriously.services'
+alias ssh_statstools='ssh -p 9022 root@stats-tools.qriously.services'
+alias ssh_dbconsole='ssh -p 9122 root@dbconsole.qriously.services'
