@@ -15,7 +15,9 @@ HISTCONTROL=ignoredups:ignorespace
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
+HISTFILE=${HOME}/.history/$(date -u +%Y%m%d)_$(hostname -s)_$$
+HISTTIMEFORMAT="%Y%m%dT%H:%M:%S "
+HISTSIZE=2000
 HISTFILESIZE=2000
 
 # check the window size after each command and, if necessary,
@@ -101,6 +103,10 @@ if [ -f ~/.bash_completion ]; then
     . ~/.bash_completion
 fi
 
+if [ -f ~/.bash_functions ]; then
+    . ~/.bash_functions
+fi
+
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -154,3 +160,4 @@ fi
 if [ -f ~/.maven_opts ]; then
     . ~/.maven_opts
 fi
+
