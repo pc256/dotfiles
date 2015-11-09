@@ -1,9 +1,4 @@
-# boot2docker
-alias b2ddown='boot2docker down'
-alias b2dssh='boot2docker ssh'
-alias b2dst='boot2docker status'
-alias b2dup='boot2docker up'
-
-# docker
+# docker aliases
+alias dm='docker-machine'
 alias dpa='docker ps -a'
 alias dim='docker images | sort'
