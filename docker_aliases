@@ -1,4 +1,5 @@
 # docker aliases
 alias dm='docker-machine'
+alias dms='docker-machine status default'
 alias dpa='docker ps -a'
 alias dim='docker images | sort'
