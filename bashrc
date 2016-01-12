@@ -29,6 +29,7 @@ shopt -s checkwinsize
 
 # set window title
 PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/~}"; echo -ne "\007"'
+PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
@@ -147,9 +148,12 @@ export GNUTERM=x11
 
 # python shell startup file
 export PYTHONSTARTUP=$HOME/.pythonstartup.py
-export HOMEBREW_GITHUB_API_TOKEN=0b74e041ad27fb724bbee1999ae0463b542aa41d
+if [ -f ~/.github_auth ]; then
+    . ~/.github_auth
+fi
 export JAVA_HOME=`/usr/libexec/java_home -v '1.8*'`
 export QRIOUSLY_HOME=$HOME/development/qriously
+export DEPLOY_ENVIRONMENT=local
 
 # docker
 if [ -f ~/.docker_env ]; then

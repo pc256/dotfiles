@@ -1,5 +1,7 @@
 # docker aliases
 alias dm='docker-machine'
 alias dms='docker-machine status default'
+alias dmstart='docker-machine start default'
+alias dmstop='docker-machine stop default'
 alias dpa='docker ps -a'
-alias dim='docker images | sort'
+alias dim='docker images'
