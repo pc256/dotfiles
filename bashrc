@@ -120,6 +120,7 @@ fi
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 
+export JAVA_HOME=`/usr/libexec/java_home -v '1.8*'`
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 parse_virtualenv() {
     if [ -n "$VIRTUAL_ENV" ] ; then
@@ -151,7 +152,10 @@ export PYTHONSTARTUP=$HOME/.pythonstartup.py
 if [ -f ~/.github_auth ]; then
     . ~/.github_auth
 fi
-export JAVA_HOME=`/usr/libexec/java_home -v '1.8*'`
+
+if [ -f ~/.qriously_env ]; then
+    source ~/.qriously_env
+fi
 export QRIOUSLY_HOME=$HOME/development/qriously
 export DEPLOY_ENVIRONMENT=local
 
@@ -165,3 +169,4 @@ if [ -f ~/.maven_opts ]; then
     . ~/.maven_opts
 fi
 
+#### END ####

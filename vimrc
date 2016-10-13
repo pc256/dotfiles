@@ -56,6 +56,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 autocmd FileType java set tags=~/development/.javatags
 autocmd FileType python set tags=~/development/.pythontags
 
+command Sudow w !sudo tee % > /dev/null
+
 function! AirlineInit()
 let g:airline_section_b = airline#section#create('%{virtualenv#statusline()}')
 let g:airline#extensions#virtualenv#enabled = 1

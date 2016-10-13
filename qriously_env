@@ -1,0 +1,2 @@
+export QRIOUSLY_HOME=$HOME/development/qriously
+export DEPLOY_ENVIRONMENT=local
