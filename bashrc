@@ -153,13 +153,12 @@ if [ -f ~/.github_auth ]; then
     . ~/.github_auth
 fi
 
+# qriously env
 if [ -f ~/.qriously_env ]; then
     source ~/.qriously_env
 fi
-export QRIOUSLY_HOME=$HOME/development/qriously
-export DEPLOY_ENVIRONMENT=local
 
-# docker
+# docker env
 if [ -f ~/.docker_env ]; then
     . ~/.docker_env
 fi
