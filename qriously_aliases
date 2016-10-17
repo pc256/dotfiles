@@ -1,11 +1,11 @@
-alias ssh_knime='ssh -p 9122 -L 5900:localhost:5900 root@datascience.qriously.services'
-alias ssh_statstools='ssh -p 9022 root@stats-tools.qriously.services'
-alias ssh_dbconsole='ssh -p 9122 root@dbconsole.qriously.services'
+alias qriously-server='cd $QRIOUSLY_HOME/QriouslyServer'
+alias qriously-qdash='cd $QRIOUSLY_HOME/qdash'
+alias qriously-random='cd $QRIOUSLY_HOME/randomProjects'
 
-alias buildall='mvn clean install -Plocal -T 2C -Dassembly.skipAssembly=true -DskipTests'
+alias buildall='mvn clean install -Plocal -T 2C -Dassembly.skipAssembly=true -pl \!:qdash-webapp -DskipTests'
 alias f='fab -f scripts/fabfile.py'
 
 alias logsh='docker run -ti --rm --volumes-from=data-volumes busybox'
 
-alias start_ls='fab -f start_local_stack.py start_local_stack'
-alias stop_ls='fab -f start_local_stack.py stop_local_stack'
+alias startls='fab -f start_local_stack.py start_local_stack'
+alias stopls='fab -f start_local_stack.py stop_local_stack'
