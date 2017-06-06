@@ -1,5 +1,6 @@
-status=`docker-machine status default`
+export DOCKER_MACHINE_NAME=default
+status=`docker-machine status ${DOCKER_MACHINE_NAME}`
 if [ $status = 'Running' ] || [ $status = 'running' ]; then
     echo "Setting docker-machine environment"
-    eval "$(docker-machine env default)"
+    eval "$(docker-machine env ${DOCKER_MACHINE_NAME})"
 fi

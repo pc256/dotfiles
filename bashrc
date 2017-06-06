@@ -168,4 +168,19 @@ if [ -f ~/.maven_opts ]; then
     . ~/.maven_opts
 fi
 
+
+# on OS X with GPGTools, comment out the next line:
+#eval $(gpg-agent --daemon)
+GPG_TTY=$(tty)
+export GPG_TTY
+if [ -f "${HOME}/.gpg-agent-info" ]; then
+    . "${HOME}/.gpg-agent-info"
+    export GPG_AGENT_INFO
+    export SSH_AUTH_SOCK
+fi
+
+# brew
+PATH="/usr/local/opt/coreutils/libexec/gnubin:$JAVA_HOME/bin:$PATH"
+MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+
 #### END ####

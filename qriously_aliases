@@ -2,7 +2,8 @@ alias qriously-server='cd $QRIOUSLY_HOME/QriouslyServer'
 alias qriously-qdash='cd $QRIOUSLY_HOME/qdash'
 alias qriously-random='cd $QRIOUSLY_HOME/randomProjects'
 
-alias buildall='mvn clean install -Plocal -T 2C -Dassembly.skipAssembly=true -pl \!:qdash-webapp -DskipTests'
+alias buildall='mvn clean install -P!\buildUberJar -T 2C -pl \!:qdash-webapp -DskipTests'
+alias testall='mvn clean install -pl \!:qdash-webapp -P\!buildUberJar -pl \!:qriously-integration-tests'
 alias f='fab -f scripts/fabfile.py'
 
 alias logsh='docker run -ti --rm --volumes-from=data-volumes busybox'
