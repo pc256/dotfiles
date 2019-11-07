@@ -3,7 +3,7 @@
 # setup dotfile symlinks
 ################################################################################
 
-FILES=`ls -I README -I setup.sh`
+FILES=`ls -I README -I setup.sh -I vimrc`
 
 echo "Adding dotfile symlinks..."
 
@@ -13,6 +13,9 @@ for f in ${FILES}; do
         ln -s dotfiles/${f} ../.${f}
     fi
 done
+
+echo "Setting up bash history"
+mkdir ${HOME}/.history
 
 echo "Done."
 

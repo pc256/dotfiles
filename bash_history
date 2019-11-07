@@ -10,4 +10,3 @@ export HISTFILE=${HOME}/.history/$(date -u +%Y%m%d)_$(hostname -s)_$$
 export HISTTIMEFORMAT="%Y%m%dT%H:%M:%S "
 export HISTSIZE=2000
 export HISTFILESIZE=2000
-
