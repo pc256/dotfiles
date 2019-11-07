@@ -1,2 +1,32 @@
+# common qriously variables
 export QRIOUSLY_HOME=$HOME/development/qriously
 export DEPLOY_ENVIRONMENT=local
+export AWS_ACCESS_KEY_ID=`aws configure get default.aws_access_key_id`
+export AWS_SECRET_ACCESS_KEY=`aws configure get default.aws_secret_access_key`
+
+# java
+export JAVA_HOME=`/usr/libexec/java_home -v '1.8*'`
+
+# virtualenvwrapper (python)
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+source /usr/local/bin/virtualenvwrapper.sh
+
+# python shell startup
+export PYTHONSTARTUP=$HOME/.pythonstartup.py
+
+parse_virtualenv() {
+    if [ -n "$VIRTUAL_ENV" ] ; then
+        basename $VIRTUAL_ENV | sed -e 's/\(.*\)/(\1) /'
+    fi
+}
+
+# gpgtools
+export GPG_TTY=$(tty)
+if [ -f "${HOME}/.gpg-agent-info" ]; then
+    . "${HOME}/.gpg-agent-info"
+    export GPG_AGENT_INFO
+    export SSH_AUTH_SOCK
+fi
+

@@ -1,12 +1,26 @@
-alias qriously-server='cd $QRIOUSLY_HOME/QriouslyServer'
-alias qriously-qdash='cd $QRIOUSLY_HOME/qdash'
-alias qriously-random='cd $QRIOUSLY_HOME/randomProjects'
+alias qriously-core='cd $QRIOUSLY_HOME/qriously-core'
+alias qriously-datascience='cd $QRIOUSLY_HOME/data-science'
 
-alias buildall='mvn clean install -P!\buildUberJar -T 2C -pl \!:qdash-webapp -DskipTests'
-alias testall='mvn clean install -pl \!:qdash-webapp -P\!buildUberJar -pl \!:qriously-integration-tests'
+alias buildall='mvn clean install -P\!buildUberJar -T 2C -pl \!:qdash-webapp -DskipTests'
+alias buildall-min='mvn clean install -P!\buildUberJar -T 2C -pl \!:qdash-webapp -Dmaven.test.skip=true'
+alias buildall-tests='mvn clean install -Punittests -T 2C -P\!buildUberJar -pl \!:qdash-webapp -pl \!:qriously-integration-tests'
+alias buildall-its='mvn clean install -T 2C -P\!buildUberJar -pl \!:qdash-webapp'
 alias f='fab -f scripts/fabfile.py'
 
 alias logsh='docker run -ti --rm --volumes-from=data-volumes busybox'
+alias hbasest='docker exec -ti hbase-build service hbase-master status'
+alias hbasert='docker exec -ti hbase-build service hbase-master restart'
 
 alias startls='fab -f start_local_stack.py start_local_stack'
 alias stopls='fab -f start_local_stack.py stop_local_stack'
+
+alias publicip='host myip.opendns.com resolver1.opendns.com'
+
+b64encode() {
+    python -c "import base64; print base64.b64encode('$1').rstrip('=')"
+}
+
+b64decode() {
+    python -c "import base64; print base64.b64decode('$1')"
+}
+

@@ -1,0 +1,16 @@
+GREP=$(which "grep")
+
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) /'
+}
+
+parse_git_status() {
+    git rev-parse --git-dir > /dev/null 2>&1
+    if [ $? -eq 0 ]; then
+        num=$(echo `git status` | $GREP "Your branch is ahead of" | awk '{split($0,a," "); print a[11];}')
+        if [ -n "$num" ]; then
+            echo "(+$num) "
+        fi
+    fi
+}
+

@@ -1,3 +1,4 @@
+export AWS_SDK_LOAD_CONFIG=true
 export DOCKER_MACHINE_NAME=default
 status=`docker-machine status ${DOCKER_MACHINE_NAME}`
 if [ $status = 'Running' ] || [ $status = 'running' ]; then

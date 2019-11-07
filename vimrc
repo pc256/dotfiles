@@ -12,7 +12,6 @@ Plugin 'bling/vim-airline'
 Plugin 'jmcantrell/vim-virtualenv'
 Plugin 'ervandew/supertab'
 Plugin 'majutsushi/tagbar'
-Plugin 'Valloric/YouCompleteMe'
 call vundle#end() " end vundle
 
 set number
