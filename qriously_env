@@ -8,7 +8,7 @@ export AWS_SECRET_ACCESS_KEY=`aws configure get default.aws_secret_access_key`
 export JAVA_HOME=`/usr/libexec/java_home -v '1.8*'`
 
 # virtualenvwrapper (python)
-export WORKON_HOME=$HOME/.virtualenvs
+export WORKON_HOME=${QRIOUSLY_HOME}/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 source /usr/local/bin/virtualenvwrapper.sh
