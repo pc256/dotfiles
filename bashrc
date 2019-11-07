@@ -5,20 +5,10 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-# don't put duplicate lines in the history. See bash(1) for more options
-# ... or force ignoredups and ignorespace
-HISTCONTROL=ignoredups:ignorespace
 
-# append to the history file, don't overwrite it
-shopt -s histappend
-
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTFILE=${HOME}/.history/$(date -u +%Y%m%d)_$(hostname -s)_$$
-HISTTIMEFORMAT="%Y%m%dT%H:%M:%S "
-#HISTSIZE=-1
-#HISTFILESIZE=-1
-HISTSIZE=2000
-HISTFILESIZE=2000
+if [ -f ~/.bash_history ]; then
+    . ~/.bash_history
+fi
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -83,9 +73,6 @@ if [ -f ~/.git_functions ]; then
     . ~/.git_functions
 fi
 
-# vim mode for bash
-set -o vi
-
 if [ -f ~/.github_auth ]; then
     . ~/.github_auth
 fi
@@ -105,9 +92,12 @@ if [ -f ~/.maven_opts ]; then
     . ~/.maven_opts
 fi
 
+# vim mode for bash
+set -o vi
+
 PS1="\n\$(parse_virtualenv)\$(parse_git_branch)\$(parse_git_status)\u@\h:\e[0;32m\w\e[m\n\$ "
 
-# brew
+# Set path
 PATH="/usr/local/opt/coreutils/libexec/gnubin:$JAVA_HOME/bin:$PATH"
 MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
