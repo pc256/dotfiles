@@ -1,5 +1,5 @@
 # common qriously variables
-export QRIOUSLY_HOME=$HOME/development/qriously
+export QRIOUSLY_HOME=$HOME/qriously/development
 export DEPLOY_ENVIRONMENT=local
 export AWS_ACCESS_KEY_ID=`aws configure get default.aws_access_key_id`
 export AWS_SECRET_ACCESS_KEY=`aws configure get default.aws_secret_access_key`
