@@ -14,3 +14,6 @@ parse_git_status() {
     fi
 }
 
+sourcetree() (
+    open /Applications/Sourcetree.app &
+)
