@@ -1,3 +1,4 @@
-if [ -f /usr/local/Cellar/git/2.1.0/etc/bash_completion.d/git-completion.bash ]; then
-    . /usr/local/Cellar/git/2.1.0/etc/bash_completion.d/git-completion.bash
-fi
+# import local completions
+for file in /usr/local/etc/bash_completion.d/* ; do
+    . "$file"
+done
