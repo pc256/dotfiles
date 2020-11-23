@@ -98,8 +98,8 @@ set -o vi
 PS1="\n\$(parse_virtualenv)\$(parse_git_branch)\$(parse_git_status)\u@\h:\e[0;32m\w\e[m\n\$ "
 
 # Set path
-PATH="/usr/local/opt/coreutils/libexec/gnubin:$JAVA_HOME/bin:$PATH"
-MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+PATH="/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/findutils/libexec/gnubin:$JAVA_HOME/bin:$PATH"
+MANPATH="/usr/local/opt/coreutils/libexec/gnuman:/usr/local/opt/findutils/libexec/gnuman:$MANPATH"
 
 ################################################################################
 # END
