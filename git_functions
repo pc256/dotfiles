@@ -1,4 +1,4 @@
-GREP=$(which "grep")
+GREP=$(which -p grep)
 
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) /'
@@ -17,3 +17,15 @@ parse_git_status() {
 sourcetree() (
     open /Applications/Sourcetree.app &
 )
+
+b64encode() {
+    python3 -c "import base64; print(base64.b64encode('$1'.encode('utf-8')).decode().rstrip('='))"
+}
+
+b64decode() {
+    python3 -c "import base64; print(base64.b64decode('$1'))"
+}
+
+numeronym() {
+    python3 -c "word='$1'; print(word[0] + str(len(word)-2) + word[-1] if len(word) > 2 else word)"
+}

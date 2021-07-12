@@ -18,7 +18,7 @@ alias grep='grep --exclude-dir=".git"'
 
 # useful
 alias randpw='openssl rand -base64'
-alias j8='export JAVA_HOME=`/usr/libexec/java_home -v '1.8*'`'
+#alias j8='export JAVA_HOME=`/usr/libexec/java_home -v '1.8*'`'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert

@@ -1,0 +1,5 @@
+parse_virtualenv() {
+    if [ -n "$VIRTUAL_ENV" ] ; then
+        basename $VIRTUAL_ENV | sed -e 's/\(.*\)/(\1) /'
+    fi
+}

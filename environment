@@ -1,0 +1,18 @@
+# java
+export JAVA_HOME=`/usr/libexec/java_home -v '1.8*'`
+
+# python virtualenv
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=/opt/homebrew/bin/python3
+source /opt/homebrew/bin/virtualenvwrapper.sh
+
+# python shell startup
+export PYTHONSTARTUP=$HOME/.pythonstartup.py
+
+# path
+export PATH="/opt/homebrew/opt/openjdk@11/bin:/opt/homebrew/bin:/opt/homebrew/opt/ruby/bin:/opt/homebrew/opt/coreutils/libexec/gnubin:/opt/homebrew/opt/findutils/libexec/gnubin:/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
+export MANPATH="/opt/homebrew/opt/coreutils/libexec/gnuman:/opt/homebrew/opt/findutils/libexec/gnuman:/opt/homebrew/opt/grep/libexec/gnuman:$MANPATH"
+
+################################################################################
+# END
+################################################################################

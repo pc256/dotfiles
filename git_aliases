@@ -1,13 +1,8 @@
 alias gitco='git checkout'
-__git_complete gitco _git_checkout
-
 alias gitbr='git branch'
-__git_complete gitbr _git_branch
-
 alias gpull='git pull'
 alias gpush='git push'
 alias gitlg='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
 alias gitst='git status'
-alias gitx='nohup /Applications/GitX.app/Contents/MacOS/GitX . &'
 
 alias prlist='hub pr list --format="%sC%i%Creset - %t [%H] [%au] | %Cyellow%U%Creset%n"'
